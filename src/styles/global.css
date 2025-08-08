@@ -1,24 +1,46 @@
 html {
-  background-color: #f1f5f9;
+  background-color: rgb(250,250, 250);
   font-family: sans-serif;
 }
 
 body {
-  margin: -0 auto;
+  margin: auto;
   width: 100%;
-  max-width: 80ch;
+  /* max-width: 200ch; */
   padding: 1rem;
   line-height: 1.5;
+  left: 0; 
+  position: fixed; /* 固定定位 */
+  
 }
 
-* {
+{
   box-sizing: border-box;
+  
 }
 
 h1 {
   margin: 1rem 0;
+  margin-left: 5em;/* 导航栏的字距离左侧 */
+  color: rgb(0, 128, 58);
   font-size: 2.5rem;
+
 }
+
+h2 {
+  margin-left: 5em;/* 导航栏的字距离左侧 */
+
+}
+h3,
+li {
+  margin-left: 6.3em;/* 导航栏的字距离左侧 */
+
+}
+button {
+  margin-left: 8em;/* 导航栏的字距离左侧 */
+
+}
+
 /* nav styles */
 .hamburger {
   padding-right: 20px;
@@ -32,27 +54,50 @@ h1 {
   margin-bottom: 10px;
   background-color: #ff9776;
 }
+.nav-bar {
+  left: 0; 
+  width: 100%;
+  top: 3rem;/* 改成0顶部能到顶 */
+  background-color: #4c1d95;
+  text-align: center; /* 内部元素居中 */
+  position: fixed; /* 固定定位 */
+}
+
 .nav-links {
   width: 100%;
   top: 5rem;
-  left: 48px;
+  gap: 20px;    
+  left: 0;
   background-color: #ff9776;
   display: none;
-  margin: 0;
+  margin: 100;
+  text-align: center; /* 内部元素居中 */
+}
+.content {
+  max-width: 80ch;        /* 内容最大宽度（如80个字符） */
+  margin: 0 auto;         /* 水平居中 */
+  padding: 1rem;          /* 内边距 */
+  left: 0; 
+  text-align: center; /* 内部元素居中 */
 }
 
+/* 导航栏参数 */
 .nav-links a {
-  display: block;
+  display: flex;
+  color: rgb(224, 203, 215);
+  background-color: transparent;  /* 首页，关于...透明颜色 */
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  left: 0; 
+  text-align: center; /* 内部元素居中 */
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #ff9776;
+  background-color: #088861;
 }
 
 .expanded {
@@ -61,16 +106,22 @@ h1 {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
+    left: 0; 
+    gap: 20px;   
+    margin-left: 55em;/* 导航栏的字距离左侧 */
+    display: flex;
     position: static;
     width: auto;
     background: none;
+    text-align: center; /* 内部元素居中 */
   }
 
   .nav-links a {
-    display: inline-block;
+    left: 0; 
+    gap: 20px;   
+    display: flex;
     padding: 15px 20px;
+    text-align: center; /* 内部元素居中 */
   }
 
   .hamburger {
@@ -78,7 +129,7 @@ h1 {
   }
 }
 html.dark {
-  background-color: #0d0950;
+  background-color: rgb(61,68, 81);
   color: #fff;
 }
 

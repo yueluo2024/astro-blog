@@ -4,12 +4,15 @@ import Navigation from './Navigation.astro';
 import ThemeIcon from './ThemeIcon.astro';
 ---
 
-<header>
- <nav>
-    <!-- 主题切换 -->
-    <!-- 汉堡包 -->
-    <Hamburger />
-    <ThemeIcon />
+<header class="main-header">
+  <nav class="navbar-container">
+    <!-- 主题切换图标 -->
+    <ThemeIcon class="theme-icon" />
+    
+    <!-- 导航链接（首页、关于等） -->
     <Navigation />
- </nav>
+    
+    <!-- 汉堡菜单（小屏幕使用） -->
+    <Hamburger class="hamburger-menu" />
+  </nav>
 </header>

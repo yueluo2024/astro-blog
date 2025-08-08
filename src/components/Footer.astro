@@ -4,8 +4,26 @@ import Social from "./Social.astro";
 
 ---
 
-<footer>
+<footer class="site-footer">
     <Social siteUrl="youtube" siteTitle="油管" />
     <Social siteUrl="twitter" siteTitle="推特" />
     <Social siteUrl="google" siteTitle="谷歌" />
 </footer>
+<style>
+  /* 固定 footer 到底部的核心样式 */
+  .site-footer {
+    position: fixed; /* 固定定位 */
+    bottom: 0; /* 距离底部 0 */
+    left: 0; /* 距离左侧 0 */
+    width: 100%; /* 宽度占满视口 */
+    background-color: #4c1d95; /* 与链接背景色一致 */
+    padding: 1rem 0; /* 上下内边距 */
+    text-align: center; /* 内部元素居中 */
+    z-index: 100; /* 避免被其他内容遮挡 */
+  }
+
+  /* 调整社交链接的间距（可选，避免拥挤） */
+  .site-footer > a {
+    margin: 0 0.5rem; /* 链接之间的左右间距 */
+  }
+</style>
